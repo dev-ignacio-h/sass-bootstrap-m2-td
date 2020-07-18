@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+body {
+  background-color: $bg-color-mediano;
+  .espacio-multicolor {
+    background-color: $bg-header;
+    height: 85px;
+    .borde-superior,
+    .borde-inferior {
+      height: 3.5px;
+      background-color: $bg-header;
+    }
+    .color-chico {
+      height: 4px;
+      background-color: $bg-nav;
+    }
+    .color-alto {
+      height: 48px;
+      background-color: $bg-color-alto;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  .carousel-item img {
+    height: 350px;
+  }
+
+  .main {
+    background-color: $bg-main;
+    img {
+      height: 30%;
+    }
+    .columna {
+      min-width: 33%;
+      display: flex;
+      justify-content: center;
+    }
+    .fila {
+      height: 130px;
+      margin-top: 10px;
+    }
+    .texto {
+      font-size: 11.5px;
+    }
+    .fila-inferior {
+      margin-top: 100px !important;
+    }
+  }
+
+  .color-mediano {
+    height: 25px;
+    background-color: $bg-color-mediano !important;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .texto {
+    display: flex;
+    flex-wrap: wrap;
+    height: 10px;
+    p {
+      text-align: center;
+    }
+    .p1 {
+      margin-bottom: -5px !important;
+    }
+    .p-2,
+    .p-3 {
+      font-weight: 900;
+      font-size: 17px;
+      height: 50px;
+      font-style: italic;
+    }
+  }
+  .main {
+    height: 550px;
+    padding-top: 15px;
+  }
+
+  @media (max-width: 700px) {
+    .p-2,
+    .p-3 {
+      font-size: 16px !important;
+    }
+  }
+
+  @media (max-width: 905px) {
+    .main {
+      height: 1030px;
+    }
+  }
+}

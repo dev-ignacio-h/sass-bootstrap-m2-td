@@ -1,0 +1,13 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;  
+  
+  h1 {
+    font-size: 1.5em;
+    letter-spacing: -2.5px;
+    font-weight: 400;
+  }
+}

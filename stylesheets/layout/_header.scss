@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-header;
+  h1 {
+    height: 30px;
+    font-style: italic;
+  }
+}
+
+.nav-custom {
+  background-color: $bg-nav;
+  display: flex;
+  justify-content: space-between;
+
+  .navbar-collapse {
+    // padding-left: 1em;
+    a {
+      padding: 1.5em !important;
+    }
+  }
+
+  img.logo2 {
+    vertical-align: text-top;
+  }
+  img.logo1 {
+    vertical-align: text-bottom;
+  }
+  a {
+    color: $text-color !important;
+  }
+
+  .nav-item {
+    // padding-right: 5em !important;
+    font-weight: 500;
+    font-family: "Satisfy", cursive;
+    font-size: 25px;
+  }
+  .user-options {
+    display: inline-flex;
+    font-weight: 100;
+    font-size: 20px;
+    align-items: center;
+    padding-left: 5em;
+    font-family: $code-font-stack;
+
+    .slash {
+      align-self: center;
+      margin-left: -1.1em !important;
+      margin-right: -1.1em !important;
+      font-size: 24px;
+      vertical-align: text-top;
+    }
+  }
+
+  i {
+    font-size: 22px;
+    margin-right: -0.7em !important ;
+  }
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.ingresar {
+  margin-left: -5px !important;
+}
+
+@media (max-width: 1047px) {
+  .user-options {
+    padding-left: 1.5em !important;
+  }
+}
